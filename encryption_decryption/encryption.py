@@ -58,9 +58,6 @@ from Crypto.PublicKey import RSA
 
 # =============================================================================
 # HARDCODED ATTACKER PUBLIC KEY (pk)
-# Run attacker_keygen.py on the Kali VM and paste the printed block here.
-# This mirrors real ransomware, which embeds its public key in the payload;
-# the victim needs NO key file for the encryption to run.
 # =============================================================================
 PUBLIC_KEY_PEM = """-----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyxcZUnePMrUHaceaxu6H
@@ -73,7 +70,6 @@ IQIDAQAB
 -----END PUBLIC KEY-----"""
 
 # --------------------------- customization ----------------------------------
-# REPLACE 'EUID' with the EUID of one group member (project-description
 # requirement: tasks include customizations based on Student/EUID values).
 EUID = 'abcde'
 

