@@ -124,6 +124,11 @@ artifacts.
 ### 6. Defense: monitoring, detection, mitigation, recovery (victim VM)
 
 ```bash
+# Installing auditd and enabling it
+sudo apt install auditd
+sudo systemctl enable --now auditd
+
+
 # Monitoring rules (kernel-level audit on the protected directory)
 sudo auditctl -w /home/osboxes/Desktop/critical_abcde -p wa -k ransomwatch
 
@@ -133,9 +138,11 @@ cd mitigation && python3 mitigate.py backup
 # Monitor + detection (allowlist rules engine) — see mitigation/README.md
 # ... monitor.py runs live and alerts auditd_bridge.py with PID + executable
 
+sudo python3 monitor.py
+
 # Response and recovery
-python3 mitigate.py incidents
-python3 mitigate.py restore
+python3 mitigate.py incidents # we register the incident in the database
+python3 mitigate.py restore  # we restore all the files
 ```
 
 The full pipeline, roles and phases are documented in
