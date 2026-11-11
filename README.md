@@ -18,7 +18,7 @@ a verified backup (Incident Response Plan).
 |---|---|---|
 | Francesco Galazzo | Action (encryption/decryption), Infection (USB Rubber Ducky) | `encryption_decryption/`, `key_generation/`, `rubber_ducky/` |
 | Ikhlas | Mitigation & Recovery, Incident Response Plan | `mitigation/` |
-| Brandon | Monitoring & Detection (auditd + allowlist rules) | `mitigation/` (monitor/detection) |
+| Brandon | Monitoring & Detection (auditd + allowlist rules) | `monitoring/` |
 
 ## Repository layout
 
